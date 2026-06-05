@@ -4,6 +4,9 @@ import { CheckCircle2, ListTodo, Search, AlertCircle, Sparkles, Filter, ArrowUpD
 import TaskForm from './components/TaskForm';
 import TaskItem from './components/TaskItem';
 
+// Set production API base URL if defined, otherwise default to empty string for local proxy
+axios.defaults.baseURL = import.meta.env.VITE_API_URL || '';
+
 function App() {
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
