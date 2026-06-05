@@ -1,0 +1,27 @@
+{
+  "name": "todo-backend",
+  "version": "1.0.0",
+  "description": "To-Do List API Backend using Node.js, Express, and MongoDB",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "todo"
+  ],
+  "author": "Santosh Kumar Sahoo",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.2"
+  }
+}
