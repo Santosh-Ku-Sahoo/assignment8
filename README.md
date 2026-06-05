@@ -116,3 +116,17 @@ Make sure you have the following installed:
 ### 4. Handling Overdue Tasks
 * **Challenge:** I wanted tasks that are past their due dates to be visually distinct so the user knows they are overdue.
 * **Solution:** I wrote a helper function in `TaskItem.jsx` that compares the task's due date with today's date. If the date is in the past and the task is incomplete, the badge turns red and displays "Overdue (X days ago)".
+
+---
+
+## Vercel Multi-Service Deployment (Monorepo)
+The root of the `assignment8` folder contains a `vercel.json` file designed to build and deploy both the React frontend and Express backend services in a single Vercel project:
+
+1. Import the `assignment8` root folder into Vercel.
+2. Vercel will detect the `experimentalServices` config:
+   - **Frontend**: Served from the `frontend` folder at the root path (`/`).
+   - **Backend**: Served from the `backend` folder under the `/_/backend` route prefix.
+3. Configure the following environment variables:
+   - **Backend Service Variables**: Add `MONGODB_URI` containing your MongoDB Atlas connection string.
+   - **Frontend Service Variables**: Add `VITE_API_URL` with the value `/_/backend` to tell Axios to route all production API requests through the Vercel monorepo proxy.
+
